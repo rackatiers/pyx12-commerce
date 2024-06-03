@@ -11,7 +11,13 @@
 ######################################################################
 -->
 <data_elements>
+  <data_ele ele_num="91" data_type="ID" min_len="1" max_len="2" name="Transportation Method/Type Code"/>
   <data_ele ele_num="100" data_type="ID" min_len="3" max_len="3" name="Currency Code"/>
+  <data_ele ele_num="133" data_type="ID" min_len="1" max_len="2" name="Routing Sequence Code"/>
+  <data_ele ele_num="146" data_type="ID" min_len="2" max_len="2" name="Shipment Method of Payment Code"/>
+  <data_ele ele_num="284" data_type="ID" min_len="2" max_len="2" name="Service Level Code"/>
+  <data_ele ele_num="387" data_type="AN" min_len="1" max_len="35" name="Routing"/>
+  <data_ele ele_num="336" data_type="ID" min_len="2" max_len="2" name="Terms Type Code"/>
   <data_ele ele_num="1004" data_type="ID" min_len="1" max_len="2" name="Percent Qualifier"/>
   <data_ele ele_num="1005" data_type="ID" min_len="4" max_len="4" name="Hierarchical Structure Code"/>
   <data_ele ele_num="1018" data_type="R" min_len="1" max_len="15" name="Exponent"/>
@@ -204,6 +210,7 @@
   <data_ele ele_num="332" data_type="R" min_len="1" max_len="6" name="Percent, Decimal Format"/>
   <data_ele ele_num="337" data_type="TM" min_len="4" max_len="8" name="Time"/>
   <data_ele ele_num="338" data_type="R" min_len="1" max_len="6" name="Terms Discount Percent"/>
+  <data_ele ele_num="347" data_type="R" min_len="1" max_len="10" name="Hash Total"/>
   <data_ele ele_num="349" data_type="ID" min_len="1" max_len="1" name="Item Description Type"/>
   <data_ele ele_num="350" data_type="AN" min_len="1" max_len="20" name="Assigned Identification"/>
   <data_ele ele_num="352" data_type="AN" min_len="1" max_len="80" name="Description"/>
@@ -318,6 +325,7 @@
   <data_ele ele_num="901" data_type="ID" min_len="2" max_len="2" name="Reject Reason Code"/>
   <data_ele ele_num="921" data_type="ID" min_len="2" max_len="2" name="Discipline Type Code"/>
   <data_ele ele_num="923" data_type="ID" min_len="1" max_len="1" name="Prognosis Code"/>
+  <data_ele ele_num="92" data_type="ID" min_len="2" max_len="2" name="Purchase Order Type Code"/>
   <data_ele ele_num="93" data_type="AN" min_len="1" max_len="60" name="Name"/>
   <data_ele ele_num="933" data_type="AN" min_len="1" max_len="264" name="Free-form Message Text"/>
   <data_ele ele_num="934" data_type="ID" min_len="2" max_len="2" name="Printer Carriage Control Code"/>
