@@ -9,13 +9,13 @@ creates a 997 response for 4010 and a 999 response for 5010. It can create an ht
 document or can translate to and from an XML representation of the data file."""
 
 setup(
-    name="pyx12",
+    name="pyx12-commerce",
     python_requires='>=3.6',
     version="3.0.0rc3",
     long_description=LONG_DESCRIPTION,
     license='BSD',
-    description="HIPAA X12 validator, parser and converter",
-    keywords='x12 hipaa healthcare edi',
+    description="HIPAA and Commerce X12 validator, parser and converter",
+    keywords='x12 commerce hipaa healthcare edi',
     author="John Holland",
     author_email="john.holland@swmbh.org",
     url="http://github.com/azoner/pyx12",
