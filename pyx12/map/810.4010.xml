@@ -58,7 +58,6 @@
       <element xid="ISA16" data_ele="I15" name="Component Element Separator" usage="R" seq="16" />
     </segment>
     <!--End of ISA segment COMPLETE --> 
-    
     <loop xid="GS_LOOP" type="explicit" name="Functional Group Header" usage="R" pos="0200" repeat="&gt;1">
       <segment xid="GS" pos="0100" usage="R" max_use="1" name="Functional Group Header">
         <element xid="GS01" data_ele="479" name="Functional Identifier Code" usage="R" seq="01">
@@ -83,7 +82,6 @@
         </element>
       </segment>
       <!--End of GS segment COMPLETE -->
-      
       <loop xid="ST_LOOP" pos="0200" usage="R" repeat="&gt;1" type="explicit" name="Transaction Set Header">
         <segment xid="ST" pos="0100" usage="R" max_use="1" name="Transaction Set Header">
           <element xid="ST01" data_ele="143" usage="R" seq="01" name="Transaction Set Identifier Code">
@@ -98,7 +96,6 @@
             </valid_codes>
           </element>
         </segment>
-
         <loop xid="HEADER" type="wrapper" pos="0300" usage="R" repeat="1" name="Header">
           <segment xid="BIG" pos="0200" usage="R" max_use="1" name="Beginning Segment for Invoice">
             <element xid="BIG01" data_ele="373" usage="R" seq="01" name="Date" />
@@ -180,6 +177,9 @@
 
 
           <!-- N1 segment -->
+
+
+
           <segment xid="ITD" usage="S" pos="1300" max_use="&gt1;" name="Terms of Sale/Deferred Terms of Sale">
             <element xid="ITD01" data_ele="336" usage="S" seq="01" name="Terms Type Code" />
             <element xid="ITD02" data_ele="333" usage="S" seq="02" name="Terms Basis Date Code" />
@@ -194,12 +194,140 @@
             <element xid="ITD11" data_ele="342" usage="S" seq="11" name="Percent of Invoice Payable" />
             <element xid="ITD12" data_ele="352" usage="S" seq="12" name="Description" />
             <element xid="ITD13" data_ele="765" usage="S" seq="13" name="Day of Month" />
-            <element xid="ITD14" data_ele="352" usage="S" seq="14" name="Payment Method Type Code" />
-            <element xid="ITD15" data_ele="352" usage="S" seq="15" name="Percentage as Decimal" />
+            <element xid="ITD14" data_ele="107" usage="S" seq="14" name="Payment Method Type Code" />
+            <element xid="ITD15" data_ele="954" usage="S" seq="15" name="Percentage as Decimal" />
           </segment>
           <!--End of ITD segment-->
+          <segment xid="DTM" usage="S" pos="1400" max_use="10" name="Date/Time Reference">
+            <element xid="DTM01" data_ele="374" usage="R" seq="01" name="Date/Time Qualifier" />
+            <element xid="DTM02" data_ele="373" usage="S" seq="02" name="Date" />
+            <element xid="DTM03" data_ele="337" usage="S" seq="03" name="Time" />
+            <element xid="DTM04" data_ele="623" usage="S" seq="04" name="Time Code" />
+            <element xid="DTM05" data_ele="1250" usage="S" seq="05" name="Date Time Period Format Qualifier" />
+            <element xid="DTM06" data_ele="1251" usage="S" seq="06" name="Date Time Period" />
+          </segment>
+          <!--End of DTM segment-->
+          <segment xid="FOB" usage="S" pos="1500" max_use="1" name="F.O.B. Related Instructions">
+            <element xid="FOB01" data_ele="146" usage="R" seq="01" name="Shipment Method of Payment Code" />
+            <element xid="FOB02" data_ele="309" usage="S" seq="02" name="Location Qualifier" />
+            <element xid="FOB03" data_ele="352" usage="S" seq="03" name="Description" />
+            <element xid="FOB04" data_ele="334" usage="S" seq="04" name="Transportation Terms Qualifier Code" />
+            <element xid="FOB05" data_ele="335" usage="S" seq="05" name="Transportation Terms Code" />
+            <element xid="FOB06" data_ele="309" usage="S" seq="06" name="Location Qualifier" />
+            <element xid="FOB07" data_ele="352" usage="S" seq="07" name="Description" />
+            <element xid="FOB08" data_ele="54" usage="S" seq="08" name="Risk of Loss Code" />
+            <element xid="FOB09" data_ele="352" usage="S" seq="09" name="Description" />
+          </segment>
+          <!--End of FOB segment-->
+          <segment xid="PID" pos="1600" usage="S" max_use="200" name="Product/Item Description">
+            <element xid="PID01" data_ele="349" usage="R" seq="01" name="Item Description Type Code" />
+            <element xid="PID02" data_ele="750" usage="S" seq="02" name="Product/Process Characteristic Code" />
+            <element xid="PID03" data_ele="559" usage="S" seq="03" name="Agency Qualifier Code" />
+            <element xid="PID04" data_ele="751" usage="S" seq="04" name="Product Description Code" />
+            <element xid="PID05" data_ele="352" usage="S" seq="05" name="Description" />
+            <element xid="PID06" data_ele="752" usage="S" seq="06" name="Surface/Layer/Position Code" />
+            <element xid="PID07" data_ele="822" usage="S" seq="07" name="Source Subqualifier" />
+            <element xid="PID08" data_ele="1073" usage="S" seq="08" name="Yes/No Condition or Response Code" />
+            <element xid="PID09" data_ele="819" usage="S" seq="09" name="Language Code" />
+            <element xid="PID10" data_ele="286" usage="S" seq="10" name="Product/Service Condition Code" />
+          </segment>
+          <!-- End of PID segment -->
+          <segment xid="MEA" pos="1700" usage="S" max_use="200" name="Measurements">
+            <element xid="MEA01" data_ele="737" usage="S" seq="01" name="Measurement Reference ID Code" />
+            <element xid="MEA02" data_ele="738" usage="S" seq="02" name="Measurement Qualifier" />
+            <element xid="MEA03" data_ele="739" usage="S" seq="03" name="Measurement Value" />
+            <composite data_ele="C001" data_ele="C001" usage="S" seq="04" name="Composite Unit of Measure">
+              <element xid="MEA04-01" data_ele="355" usage="R" seq="01" name="Unit or Basis for Measurement Code" />
+              <element xid="MEA04-02" data_ele="1018" usage="S" seq="02" name="Exponent" />
+              <element xid="MEA04-03" data_ele="649" usage="S" seq="03" name="Multiplier" />
+              <element xid="MEA04-04" data_ele="355" usage="S" seq="04" name="Unit or Basis for Measurement Code" />
+              <element xid="MEA04-05" data_ele="1018" usage="S" seq="05" name="Exponent" />
+              <element xid="MEA04-06" data_ele="649" usage="S" seq="06" name="Multiplier" />
+              <element xid="MEA04-07" data_ele="355" usage="S" seq="07" name="Unit or Basis for Measurement Code" />
+              <element xid="MEA04-08" data_ele="1018" usage="S" seq="08" name="Exponent" />
+              <element xid="MEA04-09" data_ele="649" usage="S" seq="09" name="Multiplier" />
+              <element xid="MEA04-10" data_ele="355" usage="S" seq="10" name="Unit or Basis for Measurement Code" />
+              <element xid="MEA04-11" data_ele="1018" usage="S" seq="11" name="Exponent" />
+              <element xid="MEA04-12" data_ele="649" usage="S" seq="12" name="Multiplier" />
+              <element xid="MEA04-13" data_ele="355" usage="S" seq="13" name="Unit or Basis for Measurement Code" />
+              <element xid="MEA04-14" data_ele="1018" usage="S" seq="14" name="Exponent" />
+              <element xid="MEA04-15" data_ele="649" usage="S" seq="15" name="Multiplier" />
+            </composite>
+            <element xid="MEA05" data_ele="740" usage="S" seq="05" name="Range Minimum" />
+            <element xid="MEA06" data_ele="741" usage="S" seq="06" name="Range Maximum" />
+            <element xid="MEA07" data_ele="935" usage="S" seq="07" name="Measurement Significance Code" />
+            <element xid="MEA08" data_ele="936" usage="S" seq="08" name="Measurement Attribute Code" />
+            <element xid="MEA09" data_ele="752" usage="S" seq="09" name="Surface/Layer/Position Code" />
+            <element xid="MEA10" data_ele="1373" usage="S" seq="10" name="Measurement Method or Device Code" />
+            <element xid="MEA11" data_ele="1270" usage="S" seq="11" name="Code List Qualifier Code" />
+            <element xid="MEA12" data_ele="1271" usage="S" seq="12" name="Industry Code" />
+          </segment>
 
-          <segment xid="ITD" usage="S" pos="0700" max_use="1" name="Tax Reference">
+
+
+
+                   
+
+
+
+
+
+
+
+          <segment xid="MEA" pos="1700" usage="S" max_use="200" name="Product/Item Description">
+            <element xid="PID01" data_ele="349" usage="R" seq="01" name="Item Description Type Code" />
+            <element xid="PID02" data_ele="750" usage="S" seq="02" name="Product/Process Characteristic Code" />
+            <element xid="PID03" data_ele="559" usage="S" seq="03" name="Agency Qualifier Code" />
+            <element xid="PID04" data_ele="751" usage="S" seq="04" name="Product Description Code" />
+            <element xid="PID05" data_ele="352" usage="S" seq="05" name="Description" />
+            <element xid="PID06" data_ele="752" usage="S" seq="06" name="Surface/Layer/Position Code" />
+            <element xid="PID07" data_ele="822" usage="S" seq="07" name="Source Subqualifier" />
+            <element xid="PID08" data_ele="1073" usage="S" seq="08" name="Yes/No Condition or Response Code" />
+            <element xid="PID09" data_ele="819" usage="S" seq="09" name="Language Code" />
+            <element xid="PID10" data_ele="286" usage="S" seq="10" name="Product/Service Condition Code" />
+          </segment>
+
+          <segment xid="MEA" pos="1700" usage="S" max_use="200" name="Product/Item Description">
+            <element xid="PID01" data_ele="349" usage="R" seq="01" name="Item Description Type Code" />
+            <element xid="PID02" data_ele="750" usage="S" seq="02" name="Product/Process Characteristic Code" />
+            <element xid="PID03" data_ele="559" usage="S" seq="03" name="Agency Qualifier Code" />
+            <element xid="PID04" data_ele="751" usage="S" seq="04" name="Product Description Code" />
+            <element xid="PID05" data_ele="352" usage="S" seq="05" name="Description" />
+            <element xid="PID06" data_ele="752" usage="S" seq="06" name="Surface/Layer/Position Code" />
+            <element xid="PID07" data_ele="822" usage="S" seq="07" name="Source Subqualifier" />
+            <element xid="PID08" data_ele="1073" usage="S" seq="08" name="Yes/No Condition or Response Code" />
+            <element xid="PID09" data_ele="819" usage="S" seq="09" name="Language Code" />
+            <element xid="PID10" data_ele="286" usage="S" seq="10" name="Product/Service Condition Code" />
+          </segment>
+
+          <segment xid="MEA" pos="1700" usage="S" max_use="200" name="Product/Item Description">
+            <element xid="PID01" data_ele="349" usage="R" seq="01" name="Item Description Type Code" />
+            <element xid="PID02" data_ele="750" usage="S" seq="02" name="Product/Process Characteristic Code" />
+            <element xid="PID03" data_ele="559" usage="S" seq="03" name="Agency Qualifier Code" />
+            <element xid="PID04" data_ele="751" usage="S" seq="04" name="Product Description Code" />
+            <element xid="PID05" data_ele="352" usage="S" seq="05" name="Description" />
+            <element xid="PID06" data_ele="752" usage="S" seq="06" name="Surface/Layer/Position Code" />
+            <element xid="PID07" data_ele="822" usage="S" seq="07" name="Source Subqualifier" />
+            <element xid="PID08" data_ele="1073" usage="S" seq="08" name="Yes/No Condition or Response Code" />
+            <element xid="PID09" data_ele="819" usage="S" seq="09" name="Language Code" />
+            <element xid="PID10" data_ele="286" usage="S" seq="10" name="Product/Service Condition Code" />
+          </segment>
+
+          <segment xid="MEA" pos="1700" usage="S" max_use="200" name="Product/Item Description">
+            <element xid="PID01" data_ele="349" usage="R" seq="01" name="Item Description Type Code" />
+            <element xid="PID02" data_ele="750" usage="S" seq="02" name="Product/Process Characteristic Code" />
+            <element xid="PID03" data_ele="559" usage="S" seq="03" name="Agency Qualifier Code" />
+            <element xid="PID04" data_ele="751" usage="S" seq="04" name="Product Description Code" />
+            <element xid="PID05" data_ele="352" usage="S" seq="05" name="Description" />
+            <element xid="PID06" data_ele="752" usage="S" seq="06" name="Surface/Layer/Position Code" />
+            <element xid="PID07" data_ele="822" usage="S" seq="07" name="Source Subqualifier" />
+            <element xid="PID08" data_ele="1073" usage="S" seq="08" name="Yes/No Condition or Response Code" />
+            <element xid="PID09" data_ele="819" usage="S" seq="09" name="Language Code" />
+            <element xid="PID10" data_ele="286" usage="S" seq="10" name="Product/Service Condition Code" />
+          </segment>
+
+
+          <!-- <segment xid="ITD" usage="S" pos="0700" max_use="1" name="Tax Reference">
             <element xid="TAX01" data_ele="325" usage="S" seq="01" name="Tax Identification Number" />
             <element xid="TAX02" data_ele="309" usage="S" seq="02" name="Location Qualifier" />
             <element xid="TAX03" data_ele="310" usage="S" seq="03" name="Location Identifier" />
@@ -213,30 +341,11 @@
             <element xid="TAX11" data_ele="310" usage="S" seq="11" name="Location Identifier" />
             <element xid="TAX12" data_ele="441" usage="S" seq="12" name="Tax Exempt Code" />
             <element xid="TAX13" data_ele="1179" usage="S" seq="13" name="Customs Entry Type Group Code" />
-          </segment>
+          </segment> -->
           <!--End of TAX segment-->
-          <segment xid="FOB" usage="S" pos="0800" max_use="1" name="F.O.B. Related Instructions">
-            <element xid="FOB01" data_ele="146" usage="R" seq="01" name="Shipment Method of Payment Code" />
-            <element xid="FOB02" data_ele="309" usage="S" seq="02" name="Location Qualifier" />
-            <element xid="FOB03" data_ele="352" usage="S" seq="03" name="Description" />
-            <element xid="FOB04" data_ele="334" usage="S" seq="04" name="Transportation Terms Qualifier Code" />
-            <element xid="FOB05" data_ele="335" usage="S" seq="05" name="Transportation Terms Code" />
-            <element xid="FOB06" data_ele="309" usage="S" seq="06" name="Location Qualifier" />
-            <element xid="FOB07" data_ele="352" usage="S" seq="07" name="Description" />
-            <element xid="FOB08" data_ele="54" usage="S" seq="08" name="Risk of Loss Code" />
-            <element xid="FOB09" data_ele="352" usage="S" seq="09" name="Description" />
-          </segment>
-          <!--End of FOB segment-->
           
-          <segment xid="DTM" usage="S" pos="1500" max_use="10" name="Date/Time Reference">
-            <element xid="DTM01" data_ele="374" usage="R" seq="01" name="Date/Time Qualifier" />
-            <element xid="DTM02" data_ele="373" usage="S" seq="02" name="Date" />
-            <element xid="DTM03" data_ele="337" usage="S" seq="03" name="Time" />
-            <element xid="DTM04" data_ele="623" usage="S" seq="04" name="Time Code" />
-            <element xid="DTM05" data_ele="1250" usage="S" seq="05" name="Date Time Period Format Qualifier" />
-            <element xid="DTM06" data_ele="1251" usage="S" seq="06" name="Date Time Period" />
-          </segment>
-          <!--End of DTM segment-->
+          
+        
           <segment xid="TD5" usage="S" pos="2400" max_use="1" name="Carrier Details (Routing Sequence/Transit Time)">
             <element xid="TD501" data_ele="133" usage="S" seq="01" name="Routing Sequence Code" />
             <element xid="TD502" data_ele="66" usage="S" seq="02" name="Identification Code Qualifier" />
