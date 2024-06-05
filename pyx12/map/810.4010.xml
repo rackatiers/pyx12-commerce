@@ -98,40 +98,20 @@
             </valid_codes>
           </element>
         </segment>
-        <!-- <loop xid="HEADER" type="wrapper" pos="011" usage="R" repeat="1" name="Header"> -->
+
         <loop xid="HEADER" type="wrapper" pos="030" usage="R" repeat="1" name="Header">
-          <segment xid="BEG" pos="020" usage="R" max_use="1" name="Beginning Segment for Purchase Order">
-            <syntax>P0607</syntax>
-            <syntax>C0809</syntax>
-            <syntax>P1213</syntax>
-            <syntax>C1415</syntax>
-            <syntax>P1819</syntax>
-            <syntax>C2021</syntax>
-            <element xid="BEG01" data_ele="353" usage="R" seq="01" name="Transaction Set Purpose Code">
-              <valid_codes>
-                <code>00</code>
-                <code>01</code>
-                <code>02</code>
-                <code>03</code>
-                <code>04</code>
-                <code>05</code>
-                <code>ZZ</code>
-              </valid_codes>
-            </element>
-            <element xid="BEG02" data_ele="92" usage="R" seq="02" name="Purchase Order Type Code">
-              <valid_codes>
-                <code>NE</code>
-                <code>SA</code>
-                <code>SO</code>
-                <code>SP</code>
-                <code>ST</code>
-                <code>ZZ</code>
-                <code>DS</code>
-              </valid_codes>
-            </element>
-            <element xid="BEG03" data_ele="324" usage="R" seq="03" name="Purchase Order Number" />
-            <element xid="BEG04" data_ele="328" usage="S" seq="04" name="Release Number" />
-            <element xid="BEG05" data_ele="373" usage="R" seq="05" name="Date" />
+          <segment xid="BIG" pos="020" usage="R" max_use="1" name="Beginning Segment for Invoice">
+            <element xid="BIG01" data_ele="373" usage="R" seq="01" name="Date" />
+            <element xid="BIG02" data_ele="76" usage="R" seq="02" name="Invoice Number" />
+            <element xid="BIG03" data_ele="373" usage="S" seq="03" name="Date" />
+            <element xid="BIG04" data_ele="324" usage="S" seq="04" name="Purchase Order Number" />
+            <element xid="BIG05" data_ele="328" usage="S" seq="05" name="Release Number" />
+            <element xid="BIG06" data_ele="327" usage="S" seq="06" name="Change Order Sequence Number" />
+            <element xid="BIG07" data_ele="640" usage="S" seq="07" name="Transaction Type Code" />
+            <element xid="BIG08" data_ele="353" usage="S" seq="08" name="Transaction Set Purpose Code" />
+            <element xid="BIG09" data_ele="306" usage="S" seq="09" name="Action Code" />
+            <element xid="BIG10" data_ele="76" usage="S" seq="10" name="Invoice Number" />
+            <element xid="BIG11" data_ele="1005" usage="S" seq="11" name="Hierarchical Structure Code" />
           </segment>
           <!--End of BEG segment COMPLETE -->
           <segment xid="CUR" pos="0400" usage="S" max_use="1" name="Foreign Currency Information">
