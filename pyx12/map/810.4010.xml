@@ -113,7 +113,12 @@
             <element xid="BIG10" data_ele="76" usage="S" seq="10" name="Invoice Number" />
             <element xid="BIG11" data_ele="1005" usage="S" seq="11" name="Hierarchical Structure Code" />
           </segment>
-          <!--End of BEG segment COMPLETE -->
+          <!--End of BIG segment  -->
+          <segment xid="NTE" pos="030" usage="S" max_use="100" name="Note/Special Instruction">
+            <element xid="NTE01" data_ele="363" usage="S" seq="01" name="Note Reference Code" />
+            <element xid="NTE02" data_ele="352" usage="R" seq="02" name="Description" />
+          </segment>
+          <!-- End of NTE segment -->
           <segment xid="CUR" pos="0400" usage="S" max_use="1" name="Foreign Currency Information">
             <element xid="CUR01" data_ele="98" usage="R" seq="01" name="Entity Identifier Code" />
             <element xid="CUR02" data_ele="100" usage="R" seq="02" name="Currency Code">
