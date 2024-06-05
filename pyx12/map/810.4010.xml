@@ -283,18 +283,16 @@
             <element xid="PWK11" data_ele="1271" usage="S" seq="11" name="Industry Code" />
           </segment>
           <!-- End of PWK segment -->
-          <segment xid="MEA" pos="1700" usage="S" max_use="200" name="Product/Item Description">
-            <element xid="PID01" data_ele="349" usage="R" seq="01" name="Item Description Type Code" />
-            <element xid="PID02" data_ele="750" usage="S" seq="02" name="Product/Process Characteristic Code" />
-            <element xid="PID03" data_ele="559" usage="S" seq="03" name="Agency Qualifier Code" />
-            <element xid="PID04" data_ele="751" usage="S" seq="04" name="Product Description Code" />
-            <element xid="PID05" data_ele="352" usage="S" seq="05" name="Description" />
-            <element xid="PID06" data_ele="752" usage="S" seq="06" name="Surface/Layer/Position Code" />
-            <element xid="PID07" data_ele="822" usage="S" seq="07" name="Source Subqualifier" />
-            <element xid="PID08" data_ele="1073" usage="S" seq="08" name="Yes/No Condition or Response Code" />
-            <element xid="PID09" data_ele="819" usage="S" seq="09" name="Language Code" />
-            <element xid="PID10" data_ele="286" usage="S" seq="10" name="Product/Service Condition Code" />
+          <segment xid="PKG" pos="1900" usage="S" max_use="25" name="Marking, Packaging, Loading">
+            <element xid="PKG01" data_ele="349" usage="R" seq="01" name="Item Description Type Code" />
+            <element xid="PKG02" data_ele="753" usage="S" seq="02" name="Packaging Characteristic Code" />
+            <element xid="PKG03" data_ele="559" usage="S" seq="03" name="Agency Qualifier Code" />
+            <element xid="PKG04" data_ele="754" usage="S" seq="04" name="Packaging Description Code" />
+            <element xid="PKG05" data_ele="352" usage="S" seq="05" name="Description" />
+            <element xid="PKG06" data_ele="400" usage="S" seq="06" name="Unit Load Option Code" />
+            <element xid="PKG07" data_ele="819" usage="S" seq="07" name="Language Code" />
           </segment>
+          <!-- End of PKG segment -->
 
           <segment xid="MEA" pos="1700" usage="S" max_use="200" name="Product/Item Description">
             <element xid="PID01" data_ele="349" usage="R" seq="01" name="Item Description Type Code" />
