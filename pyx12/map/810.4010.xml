@@ -294,7 +294,58 @@
           </segment>
           <!-- End of PKG segment -->
 
-          <segment xid="MEA" pos="1700" usage="S" max_use="200" name="Product/Item Description">
+          <segment xid="L7" pos="2000" usage="S" max_use="1" name="Tariff Reference">
+            <element xid="L701" data_ele="213" usage="S" seq="01" name="Lading Line Item Number" />
+            <element xid="L702" data_ele="168" usage="S" seq="02" name="Tariff Agency Code" />
+            <element xid="L703" data_ele="171" usage="S" seq="03" name="Tariff Number" />
+            <element xid="L704" data_ele="172" usage="S" seq="04" name="Tariff Section Number" />
+            <element xid="L705" data_ele="169" usage="S" seq="05" name="Tariff Item Number" />
+            <element xid="L706" data_ele="170" usage="S" seq="06" name="Tariff Item Part" />
+            <element xid="L707" data_ele="59" usage="S" seq="07" name="Freight Class Code" />
+            <element xid="L708" data_ele="173" usage="S" seq="08" name="Tariff Supplement Identifier" />
+            <element xid="L709" data_ele="46" usage="S" seq="09" name="Ex Parte" />
+            <element xid="L710" data_ele="373" usage="S" seq="10" name="Date" />
+            <element xid="L711" data_ele="119" usage="S" seq="11" name="Rate Basis Number" />
+            <element xid="L712" data_ele="227" usage="S" seq="12" name="Tariff Column" />
+            <element xid="L713" data_ele="294" usage="S" seq="13" name="Tariff Distance" />
+            <element xid="L714" data_ele="295" usage="S" seq="14" name="Distance Qualifier" />
+            <element xid="L715" data_ele="19" usage="S" seq="15" name="City Name" />
+            <element xid="L716" data_ele="156" usage="S" seq="16" name="State or Province Code" />
+          </segment>
+          <!-- End of L7 segment -->
+          <segment xid="BAL" pos="2120" usage="S" max_use="&gt;1" name="Balance Detail">
+            <element xid="BAL01" data_ele="951" usage="R" seq="01" name="Balance Type Code" />
+            <element xid="BAL02" data_ele="522" usage="R" seq="02" name="Amount Qualifier Code" />
+            <element xid="BAL03" data_ele="782" usage="R" seq="03" name="Monetary Amount" />
+          </segment>
+          <!-- End of BAL segment -->
+          <segment xid="INC" pos="2130" usage="S" max_use="1" name="Installment Information">
+            <element xid="INC01" data_ele="336" usage="R" seq="01" name="Terms Type Code" />
+            <composite data_ele="C001" data_ele="C001" usage="R" seq="02" name="Composite Unit of Measure">
+              <element xid="INC02-01" data_ele="355" usage="R" seq="01" name="Unit or Basis for Measurement Code" />
+              <element xid="INC02-02" data_ele="1018" usage="S" seq="02" name="Exponent" />
+              <element xid="INC02-03" data_ele="649" usage="S" seq="03" name="Multiplier" />
+              <element xid="INC02-04" data_ele="355" usage="S" seq="04" name="Unit or Basis for Measurement Code" />
+              <element xid="INC02-05" data_ele="1018" usage="S" seq="05" name="Exponent" />
+              <element xid="INC02-06" data_ele="649" usage="S" seq="06" name="Multiplier" />
+              <element xid="INC02-07" data_ele="355" usage="S" seq="07" name="Unit or Basis for Measurement Code" />
+              <element xid="INC02-08" data_ele="1018" usage="S" seq="08" name="Exponent" />
+              <element xid="INC02-09" data_ele="649" usage="S" seq="09" name="Multiplier" />
+              <element xid="INC02-10" data_ele="355" usage="S" seq="10" name="Unit or Basis for Measurement Code" />
+              <element xid="INC02-11" data_ele="1018" usage="S" seq="11" name="Exponent" />
+              <element xid="INC02-12" data_ele="649" usage="S" seq="12" name="Multiplier" />
+              <element xid="INC02-13" data_ele="355" usage="S" seq="13" name="Unit or Basis for Measurement Code" />
+              <element xid="INC02-14" data_ele="1018" usage="S" seq="14" name="Exponent" />
+              <element xid="INC02-15" data_ele="649" usage="S" seq="15" name="Multiplier" />
+            </composite>
+            <element xid="INC03" data_ele="559" usage="S" seq="03" name="Quantity" />
+            <element xid="INC04" data_ele="751" usage="S" seq="04" name="Quantity" />
+            <element xid="INC05" data_ele="352" usage="S" seq="05" name="Monetary Amount" />
+            <element xid="INC06" data_ele="752" usage="S" seq="06" name="Amount Qualifier Code" />
+          </segment>
+          <!-- End of INC segment -->
+
+          <segment xid="PAM" pos="2140" usage="S" max_use="&gt;1" name="Period Amount">
             <element xid="PID01" data_ele="349" usage="R" seq="01" name="Item Description Type Code" />
             <element xid="PID02" data_ele="750" usage="S" seq="02" name="Product/Process Characteristic Code" />
             <element xid="PID03" data_ele="559" usage="S" seq="03" name="Agency Qualifier Code" />
@@ -307,7 +358,7 @@
             <element xid="PID10" data_ele="286" usage="S" seq="10" name="Product/Service Condition Code" />
           </segment>
 
-          <segment xid="MEA" pos="1700" usage="S" max_use="200" name="Product/Item Description">
+          <segment xid="CRC" pos="2145" usage="S" max_use="1" name="Conditions Indicator">
             <element xid="PID01" data_ele="349" usage="R" seq="01" name="Item Description Type Code" />
             <element xid="PID02" data_ele="750" usage="S" seq="02" name="Product/Process Characteristic Code" />
             <element xid="PID03" data_ele="559" usage="S" seq="03" name="Agency Qualifier Code" />
@@ -320,6 +371,18 @@
             <element xid="PID10" data_ele="286" usage="S" seq="10" name="Product/Service Condition Code" />
           </segment>
 
+          <segment xid="MTX" pos="2150" usage="S" max_use="5" name="Text">
+            <element xid="PID01" data_ele="349" usage="R" seq="01" name="Item Description Type Code" />
+            <element xid="PID02" data_ele="750" usage="S" seq="02" name="Product/Process Characteristic Code" />
+            <element xid="PID03" data_ele="559" usage="S" seq="03" name="Agency Qualifier Code" />
+            <element xid="PID04" data_ele="751" usage="S" seq="04" name="Product Description Code" />
+            <element xid="PID05" data_ele="352" usage="S" seq="05" name="Description" />
+            <element xid="PID06" data_ele="752" usage="S" seq="06" name="Surface/Layer/Position Code" />
+            <element xid="PID07" data_ele="822" usage="S" seq="07" name="Source Subqualifier" />
+            <element xid="PID08" data_ele="1073" usage="S" seq="08" name="Yes/No Condition or Response Code" />
+            <element xid="PID09" data_ele="819" usage="S" seq="09" name="Language Code" />
+            <element xid="PID10" data_ele="286" usage="S" seq="10" name="Product/Service Condition Code" />
+          </segment>
 
           <!-- <segment xid="ITD" usage="S" pos="0700" max_use="1" name="Tax Reference">
             <element xid="TAX01" data_ele="325" usage="S" seq="01" name="Tax Identification Number" />
