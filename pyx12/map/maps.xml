@@ -36,6 +36,7 @@ vriic - Version / Release / Industry Identifier Code (GS08)
     <map vriic="004010X098A1" fic="HC" abbr="837P">837.4010.X098.A1.xml</map>
     <map vriic="004010XXXC" fic="SP" abbr="841">841.4010.XXXC.xml</map>
     <map vriic="004010" fic="PO" abbr="850">850.4010.xml</map>
+    <map vriic="004010X070" fic="IN" abbr="810">810.4010.xml</map>
     <map vriic="004010" fic="FA" abbr="997">997.4010.xml</map>
     <map vriic="004010X070" fic="FA" abbr="997">997.4010.xml</map>
     <map vriic="004010X093A1" fic="FA" abbr="997">997.4010.xml</map>
