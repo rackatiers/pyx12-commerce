@@ -346,16 +346,24 @@
           <!-- End of INC segment -->
 
           <segment xid="PAM" pos="2140" usage="S" max_use="&gt;1" name="Period Amount">
-            <element xid="PID01" data_ele="349" usage="R" seq="01" name="Item Description Type Code" />
-            <element xid="PID02" data_ele="750" usage="S" seq="02" name="Product/Process Characteristic Code" />
-            <element xid="PID03" data_ele="559" usage="S" seq="03" name="Agency Qualifier Code" />
-            <element xid="PID04" data_ele="751" usage="S" seq="04" name="Product Description Code" />
-            <element xid="PID05" data_ele="352" usage="S" seq="05" name="Description" />
-            <element xid="PID06" data_ele="752" usage="S" seq="06" name="Surface/Layer/Position Code" />
-            <element xid="PID07" data_ele="822" usage="S" seq="07" name="Source Subqualifier" />
-            <element xid="PID08" data_ele="1073" usage="S" seq="08" name="Yes/No Condition or Response Code" />
-            <element xid="PID09" data_ele="819" usage="S" seq="09" name="Language Code" />
-            <element xid="PID10" data_ele="286" usage="S" seq="10" name="Product/Service Condition Code" />
+            <element xid="PAM01" data_ele="349" usage="R" seq="01" name="Quantity Qualifier" />
+            <element xid="PAM02" data_ele="750" usage="S" seq="02" name="Quantity" />
+
+            <element xid="PAM03" data_ele="559" usage="S" seq="03" name="Agency Qualifier Code" />
+
+            <element xid="PAM04" data_ele="751" usage="S" seq="04" name="Product Description Code" />
+            <element xid="PAM05" data_ele="352" usage="S" seq="05" name="Description" />
+            <element xid="PAM06" data_ele="752" usage="S" seq="06" name="Surface/Layer/Position Code" />
+            <element xid="PAM07" data_ele="822" usage="S" seq="07" name="Source Subqualifier" />
+            <element xid="PAM08" data_ele="1073" usage="S" seq="08" name="Yes/No Condition or Response Code" />
+            <element xid="PAM09" data_ele="819" usage="S" seq="09" name="Language Code" />
+            <element xid="PAM10" data_ele="286" usage="S" seq="10" name="Product/Service Condition Code" />\
+            <element xid="PAM11" data_ele="1074" usage="S" seq="11" name="Yes/No Condition or Response Code" />
+            <element xid="PAM12" data_ele="819" usage="S" seq="12" name="Language Code" />
+            <element xid="PAM13" data_ele="286" usage="S" seq="13" name="Product/Service Condition Code" />
+            <element xid="PAM14" data_ele="1075" usage="S" seq="14" name="Yes/No Condition or Response Code" />
+            <element xid="PAM15" data_ele="819" usage="S" seq="15" name="Language Code" />
+          
           </segment>
 
           <segment xid="CRC" pos="2145" usage="S" max_use="1" name="Conditions Indicator">
@@ -366,9 +374,6 @@
             <element xid="PID05" data_ele="352" usage="S" seq="05" name="Description" />
             <element xid="PID06" data_ele="752" usage="S" seq="06" name="Surface/Layer/Position Code" />
             <element xid="PID07" data_ele="822" usage="S" seq="07" name="Source Subqualifier" />
-            <element xid="PID08" data_ele="1073" usage="S" seq="08" name="Yes/No Condition or Response Code" />
-            <element xid="PID09" data_ele="819" usage="S" seq="09" name="Language Code" />
-            <element xid="PID10" data_ele="286" usage="S" seq="10" name="Product/Service Condition Code" />
           </segment>
 
           <segment xid="MTX" pos="2150" usage="S" max_use="5" name="Text">
