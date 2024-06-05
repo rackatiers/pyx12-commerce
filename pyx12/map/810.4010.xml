@@ -262,31 +262,27 @@
             <element xid="MEA11" data_ele="1270" usage="S" seq="11" name="Code List Qualifier Code" />
             <element xid="MEA12" data_ele="1271" usage="S" seq="12" name="Industry Code" />
           </segment>
-
-
-
-
-                   
-
-
-
-
-
-
-
-          <segment xid="MEA" pos="1700" usage="S" max_use="200" name="Product/Item Description">
-            <element xid="PID01" data_ele="349" usage="R" seq="01" name="Item Description Type Code" />
-            <element xid="PID02" data_ele="750" usage="S" seq="02" name="Product/Process Characteristic Code" />
-            <element xid="PID03" data_ele="559" usage="S" seq="03" name="Agency Qualifier Code" />
-            <element xid="PID04" data_ele="751" usage="S" seq="04" name="Product Description Code" />
-            <element xid="PID05" data_ele="352" usage="S" seq="05" name="Description" />
-            <element xid="PID06" data_ele="752" usage="S" seq="06" name="Surface/Layer/Position Code" />
-            <element xid="PID07" data_ele="822" usage="S" seq="07" name="Source Subqualifier" />
-            <element xid="PID08" data_ele="1073" usage="S" seq="08" name="Yes/No Condition or Response Code" />
-            <element xid="PID09" data_ele="819" usage="S" seq="09" name="Language Code" />
-            <element xid="PID10" data_ele="286" usage="S" seq="10" name="Product/Service Condition Code" />
+          <!-- End of MEA segment -->
+          <segment xid="PWK" pos="1800" usage="S" max_use="25" name="Paperwork">
+            <element xid="PWK01" data_ele="755" usage="R" seq="01" name="Report Type Code" />
+            <element xid="PWK02" data_ele="756" usage="S" seq="02" name="Report Transmission Code" />
+            <element xid="PWK03" data_ele="757" usage="S" seq="03" name="Report Copies Needed" />
+            <element xid="PWK04" data_ele="98" usage="S" seq="04" name="Entity Identifier Code" />
+            <element xid="PWK05" data_ele="66" usage="S" seq="05" name="Identification Code Qualifier" />
+            <element xid="PWK06" data_ele="67" usage="S" seq="06" name="Identification Code" />
+            <element xid="PWK07" data_ele="352" usage="S" seq="07" name="Description" />
+            <composite data_ele="C002" data_ele="C002" usage="S" seq="08" name="Actions Indicated">
+              <element xid="PWK08-01" data_ele="704" usage="R" seq="08" name="Paperwork/Report Action Code" />
+              <element xid="PWK08-02" data_ele="704" usage="S" seq="02" name="Paperwork/Report Action Code" />
+              <element xid="PWK08-03" data_ele="704" usage="S" seq="03" name="Paperwork/Report Action Code" />
+              <element xid="PWK08-04" data_ele="704" usage="S" seq="04" name="Paperwork/Report Action Code" />
+              <element xid="PWK08-05" data_ele="704" usage="S" seq="05" name="Paperwork/Report Action Code" />
+            </composite>
+            <element xid="PWK09" data_ele="1525" usage="S" seq="09" name="Request Category Code" />
+            <element xid="PWK10" data_ele="1270" usage="S" seq="10" name="Code List Qualifier Code" />
+            <element xid="PWK11" data_ele="1271" usage="S" seq="11" name="Industry Code" />
           </segment>
-
+          <!-- End of PWK segment -->
           <segment xid="MEA" pos="1700" usage="S" max_use="200" name="Product/Item Description">
             <element xid="PID01" data_ele="349" usage="R" seq="01" name="Item Description Type Code" />
             <element xid="PID02" data_ele="750" usage="S" seq="02" name="Product/Process Characteristic Code" />
