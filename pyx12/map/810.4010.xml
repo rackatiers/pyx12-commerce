@@ -346,48 +346,60 @@
           <!-- End of INC segment -->
 
           <segment xid="PAM" pos="2140" usage="S" max_use="&gt;1" name="Period Amount">
-            <element xid="PAM01" data_ele="349" usage="R" seq="01" name="Quantity Qualifier" />
-            <element xid="PAM02" data_ele="750" usage="S" seq="02" name="Quantity" />
-
-            <element xid="PAM03" data_ele="559" usage="S" seq="03" name="Agency Qualifier Code" />
-
-            <element xid="PAM04" data_ele="751" usage="S" seq="04" name="Product Description Code" />
-            <element xid="PAM05" data_ele="352" usage="S" seq="05" name="Description" />
-            <element xid="PAM06" data_ele="752" usage="S" seq="06" name="Surface/Layer/Position Code" />
-            <element xid="PAM07" data_ele="822" usage="S" seq="07" name="Source Subqualifier" />
-            <element xid="PAM08" data_ele="1073" usage="S" seq="08" name="Yes/No Condition or Response Code" />
-            <element xid="PAM09" data_ele="819" usage="S" seq="09" name="Language Code" />
-            <element xid="PAM10" data_ele="286" usage="S" seq="10" name="Product/Service Condition Code" />\
-            <element xid="PAM11" data_ele="1074" usage="S" seq="11" name="Yes/No Condition or Response Code" />
-            <element xid="PAM12" data_ele="819" usage="S" seq="12" name="Language Code" />
-            <element xid="PAM13" data_ele="286" usage="S" seq="13" name="Product/Service Condition Code" />
-            <element xid="PAM14" data_ele="1075" usage="S" seq="14" name="Yes/No Condition or Response Code" />
-            <element xid="PAM15" data_ele="819" usage="S" seq="15" name="Language Code" />
-          
+            <element xid="PAM01" data_ele="673" usage="R" seq="01" name="Quantity Qualifier" />
+            <element xid="PAM02" data_ele="380" usage="S" seq="02" name="Quantity" />
+            <composite data_ele="C001" data_ele="C001" usage="S" seq="03" name="Composite Unit of Measure">
+              <element xid="PAM03-01" data_ele="355" usage="R" seq="01" name="Unit or Basis for Measurement Code" />
+              <element xid="PAM03-02" data_ele="1018" usage="S" seq="02" name="Exponent" />
+              <element xid="PAM03-03" data_ele="649" usage="S" seq="03" name="Multiplier" />
+              <element xid="PAM03-04" data_ele="355" usage="S" seq="04" name="Unit or Basis for Measurement Code" />
+              <element xid="PAM03-05" data_ele="1018" usage="S" seq="05" name="Exponent" />
+              <element xid="PAM03-06" data_ele="649" usage="S" seq="06" name="Multiplier" />
+              <element xid="PAM03-07" data_ele="355" usage="S" seq="07" name="Unit or Basis for Measurement Code" />
+              <element xid="PAM03-08" data_ele="1018" usage="S" seq="08" name="Exponent" />
+              <element xid="PAM03-09" data_ele="649" usage="S" seq="09" name="Multiplier" />
+              <element xid="PAM03-10" data_ele="355" usage="S" seq="10" name="Unit or Basis for Measurement Code" />
+              <element xid="PAM03-11" data_ele="1018" usage="S" seq="11" name="Exponent" />
+              <element xid="PAM03-12" data_ele="649" usage="S" seq="12" name="Multiplier" />
+              <element xid="PAM03-13" data_ele="355" usage="S" seq="13" name="Unit or Basis for Measurement Code" />
+              <element xid="PAM03-14" data_ele="1018" usage="S" seq="14" name="Exponent" />
+              <element xid="PAM03-15" data_ele="649" usage="S" seq="15" name="Multiplier" />
+            </composite>
+            <element xid="PAM04" data_ele="522" usage="S" seq="04" name="Amount Qualifier Code" />
+            <element xid="PAM05" data_ele="782" usage="S" seq="05" name="Monetary Amount" />
+            <element xid="PAM06" data_ele="344" usage="S" seq="06" name="Unit of Time Period or Interval Code" />
+            <element xid="PAM07" data_ele="374" usage="S" seq="07" name="Date/Time Qualifier" />
+            <element xid="PAM08" data_ele="373" usage="S" seq="08" name="Date" />
+            <element xid="PAM09" data_ele="337" usage="S" seq="09" name="Time" />
+            <element xid="PAM10" data_ele="374" usage="S" seq="10" name="Date/Time Qualifier" />\
+            <element xid="PAM11" data_ele="373" usage="S" seq="11" name="Date" />
+            <element xid="PAM12" data_ele="337" usage="S" seq="12" name="Time" />
+            <element xid="PAM13" data_ele="1004" usage="S" seq="13" name="Percent Qualifier" />
+            <element xid="PAM14" data_ele="954" usage="S" seq="14" name="Percentage as Decimal" />
+            <element xid="PAM15" data_ele="1073" usage="S" seq="15" name="Yes/No Condition or Response Code" />
           </segment>
+          <!-- End of PAM segment -->
 
           <segment xid="CRC" pos="2145" usage="S" max_use="1" name="Conditions Indicator">
-            <element xid="PID01" data_ele="349" usage="R" seq="01" name="Item Description Type Code" />
-            <element xid="PID02" data_ele="750" usage="S" seq="02" name="Product/Process Characteristic Code" />
-            <element xid="PID03" data_ele="559" usage="S" seq="03" name="Agency Qualifier Code" />
-            <element xid="PID04" data_ele="751" usage="S" seq="04" name="Product Description Code" />
-            <element xid="PID05" data_ele="352" usage="S" seq="05" name="Description" />
-            <element xid="PID06" data_ele="752" usage="S" seq="06" name="Surface/Layer/Position Code" />
-            <element xid="PID07" data_ele="822" usage="S" seq="07" name="Source Subqualifier" />
+            <element xid="CRC01" data_ele="1136" usage="R" seq="01" name="Code Category" />
+            <element xid="CRC02" data_ele="1073" usage="R" seq="02" name="Yes/No Condition or Response Code" />
+            <element xid="CRC03" data_ele="1321" usage="R" seq="03" name="Condition Indicator Code" />
+            <element xid="CRC04" data_ele="1321" usage="S" seq="04" name="Condition Indicator Code" />
+            <element xid="CRC05" data_ele="1321" usage="S" seq="05" name="Condition Indicator Code" />
+            <element xid="CRC06" data_ele="1321" usage="S" seq="06" name="Condition Indicator Code" />
+            <element xid="CRC07" data_ele="1321" usage="S" seq="07" name="Condition Indicator Code" />
           </segment>
+          <!-- End of CRC segment -->
 
           <segment xid="MTX" pos="2150" usage="S" max_use="5" name="Text">
-            <element xid="PID01" data_ele="349" usage="R" seq="01" name="Item Description Type Code" />
-            <element xid="PID02" data_ele="750" usage="S" seq="02" name="Product/Process Characteristic Code" />
-            <element xid="PID03" data_ele="559" usage="S" seq="03" name="Agency Qualifier Code" />
-            <element xid="PID04" data_ele="751" usage="S" seq="04" name="Product Description Code" />
-            <element xid="PID05" data_ele="352" usage="S" seq="05" name="Description" />
-            <element xid="PID06" data_ele="752" usage="S" seq="06" name="Surface/Layer/Position Code" />
-            <element xid="PID07" data_ele="822" usage="S" seq="07" name="Source Subqualifier" />
-            <element xid="PID08" data_ele="1073" usage="S" seq="08" name="Yes/No Condition or Response Code" />
-            <element xid="PID09" data_ele="819" usage="S" seq="09" name="Language Code" />
-            <element xid="PID10" data_ele="286" usage="S" seq="10" name="Product/Service Condition Code" />
+            <element xid="MTX01" data_ele="363" usage="S" seq="01" name="Note Reference Code" />
+            <element xid="MTX02" data_ele="1551" usage="S" seq="02" name="Textual Data" />
+            <element xid="MTX03" data_ele="1551" usage="S" seq="03" name="Textual Data" />
+            <element xid="MTX04" data_ele="934" usage="S" seq="04" name="Printer Carriage Control Code" />
+            <element xid="MTX05" data_ele="1470" usage="S" seq="05" name="Number" />
+            <element xid="MTX06" data_ele="819" usage="S" seq="06" name="Language Code" />
           </segment>
+          <!-- End of MTX segment -->
 
           <!-- <segment xid="ITD" usage="S" pos="0700" max_use="1" name="Tax Reference">
             <element xid="TAX01" data_ele="325" usage="S" seq="01" name="Tax Identification Number" />
