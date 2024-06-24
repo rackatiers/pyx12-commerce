@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<transaction xid="850" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="map.xsd">
+<transaction xid="856" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="map.xsd">
   <name>Purchase Order</name>
   <loop xid="ISA_LOOP" type="explicit" name="Interchange Control Header" usage="R" pos="0100" repeat="&gt;1">
     <segment xid="ISA" pos="0100" usage="R" max_use="1" name="Interchange Control Header">
